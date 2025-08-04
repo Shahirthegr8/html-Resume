@@ -1,0 +1,118 @@
+/* Shitpost Mode: ON 💥 */
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Sans+MS&display=swap');
+
+:root {
+    --bg-color: #000;
+    --text-glow: #ff00ff;
+    --border-chaos: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+    --font-main: 'Comic Sans MS', cursive, sans-serif;
+    --accent: #00ffcc;
+    --hover: #ff0066;
+}
+
+* {
+    box-sizing: border-box;
+    cursor: crosshair;
+    transition: all 0.3s ease-in-out;
+}
+
+body {
+    background: repeating-linear-gradient(
+        45deg,
+        #000000,
+        #000000 10px,
+        #111111 10px,
+        #111111 20px
+    );
+    color: lime;
+    font-family: var(--font-main);
+    padding: 3rem;
+    animation: backgroundDance 5s infinite linear;
+}
+
+h1 {
+    font-size: 4rem;
+    text-align: center;
+    color: var(--accent);
+    text-shadow: 0 0 10px var(--text-glow), 0 0 20px var(--text-glow);
+    animation: spin 3s linear infinite;
+    border: 5px solid;
+    border-image: var(--border-chaos) 1;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+h2, h3 {
+    color: yellow;
+    background: var(--border-chaos);
+    padding: 0.5rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px magenta;
+    transform: rotate(-1deg);
+}
+
+ul {
+    margin-left: 2rem;
+    list-style: "🔥 ";
+}
+
+li {
+    margin-bottom: 0.6rem;
+    font-size: 1.1rem;
+    animation: shake 0.5s infinite alternate;
+}
+
+a {
+    color: cyan;
+    font-size: 1.5rem;
+    text-decoration: underline wavy hotpink;
+    animation: pulse 1.5s infinite;
+}
+
+a:hover {
+    color: var(--hover);
+    background-color: yellow;
+    padding: 0.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px red;
+}
+
+footer {
+    margin-top: 4rem;
+    text-align: center;
+    font-size: 1.2rem;
+    color: hotpink;
+    background: var(--border-chaos);
+    padding: 1rem;
+    border-radius: 20px;
+    box-shadow: inset 0 0 20px cyan;
+}
+
+hr {
+    border: 5px dashed magenta;
+    margin: 2rem 0;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes shake {
+    0% { transform: translateX(0px); }
+    100% { transform: translateX(5px); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.6; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes backgroundDance {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 0; }
+}
+
